@@ -1,0 +1,26 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+.cache/
+
+# Environment / virtualenvs
+.env
+.venv/
+venv/
+
+# Generated data & model checkpoints (all regenerable by running the projects)
+data/
+checkpoints/
+*.npz
+*.npy
+*.pt
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Images: only result figures committed under each project's outputs/ are kept
+*.png
+!**/outputs/**
+!**/outputs/figures/**

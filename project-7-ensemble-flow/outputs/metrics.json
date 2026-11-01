@@ -1,0 +1,23 @@
+{
+  "energy": 50.0,
+  "n_members": 3,
+  "n_events": 512,
+  "member_auc": [
+    0.9994907197827071,
+    0.9999717066545949,
+    0.9999151199637846
+  ],
+  "auc_mean": 0.9997925154670289,
+  "auc_spread": 0.00021464853396602413,
+  "mean_epistemic_std": 0.0001687635522102937,
+  "mean_aleatoric_std": 0.003743249224498868,
+  "mean_rel_std": 0.07329471409320831,
+  "max_rel_std": 0.2418399304151535,
+  "pixel_corr_ens_vs_data": 0.9993093452027821,
+  "mean_abs_err_ens_vs_data": 0.0008410268928855658,
+  "n_params_per_member": 407616,
+  "cov_1sigma": 0.09375,
+  "cov_2sigma": 0.19140625,
+  "mean_z": 7.219700813293457,
+  "frac_z_gt3": 0.71484375
+}

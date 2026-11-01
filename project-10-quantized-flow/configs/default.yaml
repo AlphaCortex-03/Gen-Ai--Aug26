@@ -1,0 +1,9 @@
+seed: 0
+n_train: 8192
+steps: 800
+batch: 128
+lr: 0.0008
+hidden: 192
+depth: 4
+sample_steps: 24
+n_eval: 512

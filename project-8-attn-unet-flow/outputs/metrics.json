@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "model": "resmlp",
+      "params": 565888,
+      "c2st_auc": 0.9998588562011719,
+      "mean_rel_err": 0.22676724284711652,
+      "train_seconds": 6.61,
+      "ms_per_event": 0.316,
+      "depth_gen": 4.272740689305159,
+      "width_gen": 2.9580900952474565
+    },
+    {
+      "model": "attn_unet",
+      "params": 131025,
+      "c2st_auc": 0.6678276062011719,
+      "mean_rel_err": 0.023574732795380964,
+      "train_seconds": 35.37,
+      "ms_per_event": 9.136,
+      "depth_gen": 3.417186543080547,
+      "width_gen": 2.2850352297243006
+    }
+  ],
+  "table": "| model     | params | c2st_auc | mean_rel_err | train_seconds | ms_per_event |\n|-----------|--------|----------|--------------|---------------|--------------|\n| resmlp    | 565888 | 0.9999   | 0.2268       | 6.61          | 0.316        |\n| attn_unet | 131025 | 0.6678   | 0.02357      | 35.37         | 9.136        |",
+  "data_reference": {
+    "depth": 3.453973897906071,
+    "width": 2.360056519158897
+  }
+}

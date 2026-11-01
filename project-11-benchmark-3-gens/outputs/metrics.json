@@ -1,0 +1,54 @@
+{
+  "WGAN-GP": {
+    "mean_image_mse": {
+      "E=10": 7.13e-06,
+      "E=50": 4.22e-06,
+      "E=100": 5.07e-06
+    },
+    "avg_mse": 5.47e-06,
+    "c2st_auc": 0.7234,
+    "train_seconds": 11.5
+  },
+  "DDPM-200": {
+    "mean_image_mse": {
+      "E=10": 0.1164882,
+      "E=50": 0.1641672,
+      "E=100": 0.16614574
+    },
+    "avg_mse": 0.14893371,
+    "c2st_auc": 0.9577,
+    "train_seconds": 6.7
+  },
+  "CFM-50": {
+    "mean_image_mse": {
+      "E=10": 0.00657573,
+      "E=50": 0.00590544,
+      "E=100": 0.00678162
+    },
+    "avg_mse": 0.00642093,
+    "c2st_auc": 0.9906,
+    "train_seconds": 6.6
+  },
+  "rows": [
+    {
+      "model": "WGAN-GP",
+      "avg_mse": 5e-06,
+      "c2st_auc": 0.7234,
+      "train_s": 11.5
+    },
+    {
+      "model": "DDPM-200",
+      "avg_mse": 0.148934,
+      "c2st_auc": 0.9577,
+      "train_s": 6.7
+    },
+    {
+      "model": "CFM-50",
+      "avg_mse": 0.006421,
+      "c2st_auc": 0.9906,
+      "train_s": 6.6
+    }
+  ],
+  "table": "| model    | avg_mse  | c2st_auc | train_s |\n|----------|----------|----------|---------|\n| WGAN-GP  | 5e-06    | 0.7234   | 11.5    |\n| DDPM-200 | 0.1489   | 0.9577   | 6.7     |\n| CFM-50   | 0.006421 | 0.9906   | 6.6     |",
+  "total_seconds": 30.8
+}

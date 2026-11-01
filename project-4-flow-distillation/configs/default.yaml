@@ -1,0 +1,14 @@
+seed: 0
+n_train: 8192
+steps: 1200
+batch: 128
+lr: 0.0008
+hidden: 192
+depth: 4
+sample_steps: 32
+n_eval: 512
+n_pairs: 4096
+teacher_steps: 50
+student_steps: 800
+student_lr: 0.0008
+ema_decay: 0.999

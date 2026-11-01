@@ -1,0 +1,11 @@
+seed: 0
+n_train: 8192
+steps: 400
+batch: 128
+lr: 0.0008
+hidden: 128
+depth: 3
+joint_hidden: 192
+joint_depth: 4
+sample_steps: 24
+n_eval: 512
