@@ -2,9 +2,8 @@
 
 [![CI](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml/badge.svg)](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml)
 
-A self-contained practice portfolio of **16 generative-AI experiments** on synthetic 2D calorimeter
-showers, built as preparation for GSoC projects on ML-based detector simulation (ML4SCI-style).
-Every project runs **end-to-end on a plain CPU laptop** (numpy / PyTorch / matplotlib only), produces
+A self-contained portfolio of **16 generative-AI experiments** on synthetic 2D calorimeter
+showers (particle-detector simulation). Every project runs **end-to-end on a plain CPU laptop** (numpy / PyTorch / matplotlib only), produces
 its own figures and `metrics.json`, and is verified with a single command:
 
 ```
