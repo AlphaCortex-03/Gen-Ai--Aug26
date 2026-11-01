@@ -1,5 +1,7 @@
 # Gen-Ai--Aug26 — Generative Models for Calorimeter Shower Simulation (August 2026)
 
+[![CI](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml/badge.svg)](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml)
+
 A self-contained practice portfolio of **16 generative-AI experiments** on synthetic 2D calorimeter
 showers, built as preparation for GSoC projects on ML-based detector simulation (ML4SCI-style).
 Every project runs **end-to-end on a plain CPU laptop** (numpy / PyTorch / matplotlib only), produces
@@ -82,6 +84,8 @@ Gen-Ai--Aug26/
 
 - Python 3.12 + CPU-only PyTorch verified end-to-end: all 16 projects, ~10 min
   total on a plain laptop CPU. No GPU required.
+- Every push runs a CI smoke pass of all 16 projects on GitHub Actions
+  (see the badge above); `run_results.json` from each run is uploaded as an artifact.
 - Datasets and `.pt` checkpoints are **not committed**: all data is synthetic
   (regenerated deterministically by `common/calo/data.py` / `src/calo_sim.py`),
   and every model retrains in seconds to minutes on CPU.
