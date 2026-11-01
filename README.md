@@ -1,92 +1,29 @@
-# Gen-Ai--Aug26 — Generative Models for Calorimeter Shower Simulation (August 2026)
+﻿# August Practice - Projects 5 to 20
 
 [![CI](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml/badge.svg)](https://github.com/AlphaCortex-03/Gen-Ai--Aug26/actions/workflows/ci.yml)
 
-A self-contained portfolio of **16 generative-AI experiments** on synthetic 2D calorimeter
-showers (particle-detector simulation). Every project runs **end-to-end on a plain CPU laptop** (numpy / PyTorch / matplotlib only), produces
-its own figures and `metrics.json`, and is verified with a single command:
+| No | Project | What I did |
+|----|---------|------------|
+| p5 | [calo-demo](p5-calo-demo/) | NumPy calorimeter shower simulator: profiles, observables, event displays |
+| p6 | [conditional-cfm](p6-conditional-cfm/) | Conditional flow matching on beam energy, C2ST AUC 0.998 |
+| p7 | [energy-interpolation](p7-energy-interpolation/) | Sample unseen beam energies (30/70 GeV) from a flow trained on 10/50/100 GeV |
+| p8 | [flow-distillation](p8-flow-distillation/) | Distilled 50-step flow sampler into a 1-step student, 45x faster |
+| p9 | [pointcloud-cfm](p9-pointcloud-cfm/) | Point-cloud shower generation with a DeepSets velocity net (41k params) |
+| p10 | [c2st-test](p10-c2st-test/) | Classifier two-sample test: physics features vs raw pixels |
+| p11 | [ensemble-flow](p11-ensemble-flow/) | 3-member flow ensemble with epistemic uncertainty maps |
+| p12 | [attn-unet-flow](p12-attn-unet-flow/) | Attention U-Net vs ResMLP velocity field comparison |
+| p13 | [layer-autoregressive](p13-layer-autoregressive/) | Layer-by-layer autoregressive shower generation (4 stages) |
+| p14 | [quantized-flow](p14-quantized-flow/) | INT8 quantisation + pruning: 3.8x smaller with ~zero AUC loss |
+| p15 | [benchmark-3-gens](p15-benchmark-3-gens/) | WGAN-GP vs DDPM vs CFM on identical data |
+| p16 | [anomaly-flow](p16-anomaly-flow/) | Flow log-prob as anomaly score (negative result, AUC 0.486) |
+| p17 | [latent-cfm](p17-latent-cfm/) | VAE latent space + flow matching in latent space |
+| p18 | [cfg-calo](p18-cfg-calo/) | Classifier-free guidance for energy control (w sweep 0-7) |
+| p19 | [transformer-cfm](p19-transformer-cfm/) | DiT-style transformer velocity field (AdaLN) |
+| p20 | [consistency-calo](p20-consistency-calo/) | Consistency model, 1-step sampling |
 
-```
-python run_all.py        # runs all 16 projects sequentially, ~10 min total on CPU, 16/16 PASS
-```
+Everything runs on CPU (numpy / PyTorch / matplotlib):
+- `cd p5-calo-demo && python src/main.py` (pipeline projects: also `python src/run.py`)
+- `cd p15-benchmark-3-gens && python src/train.py`
+- `python run_all.py --smoke` runs all 16 sequentially (GitHub Actions badge above checks on every push)
 
-## Projects
-
-| # | Project | What it demonstrates | Key result |
-|---|---------|----------------------|-----------|
-| 1 | [project-1-calo-demo](project-1-calo-demo/) | NumPy-only ShowerMC simulation: profiles, observables, event displays | shower depth 3.46 layers, width 2.35 (8192 events) |
-| 2 | [project-2-conditional-cfm](project-2-conditional-cfm/) | Conditional flow matching on beam energy with C2ST evaluation | C2ST AUC **0.998**, mean rel. err 13% |
-| 3 | [project-3-energy-interpolation](project-3-energy-interpolation/) | Train on {10, 50, 100} GeV, sample unseen {30, 70} GeV | unseen-energy AUC **0.994** |
-| 4 | [project-4-flow-distillation](project-4-flow-distillation/) | 50-step teacher → 1-step student flow matching | **45× faster** sampling, AUC 0.9975 kept |
-| 5 | [project-5-pointcloud-cfm](project-5-pointcloud-cfm/) | Shower as a point cloud (x, y, z, E) with a DeepSets velocity net | AUC 0.980 with only **41k params** |
-| 6 | [project-6-c2st-test](project-6-c2st-test/) | Classifier two-sample test: physics features vs raw pixels | physics AUC 0.9568 vs pixels 0.5926 on mean-image fakes |
-| 7 | [project-7-ensemble-flow](project-7-ensemble-flow/) | 3-member flow ensemble → epistemic uncertainty map | member spread AUC ±0.0002, pixel corr 0.9993 |
-| 8 | [project-8-attn-unet-flow](project-8-attn-unet-flow/) | ResMLP vs attention-UNet velocity field | UNet rel. err **0.017 vs 0.216** MLP (12× better) |
-| 9 | [project-9-layer-autoregressive](project-9-layer-autoregressive/) | Stage-wise layer-by-layer autoregressive generation | AR rel. err 0.037 vs joint 0.238 |
-| 10 | [project-10-quantized-flow](project-10-quantized-flow/) | INT8 quantization + pruning, size/quality Pareto | **3.8× smaller**, AUC drop 0.0001 |
-| 11 | [project-11-benchmark-3-gens](project-11-benchmark-3-gens/) | WGAN-GP vs DDPM vs CFM on identical data | CFM AUC **0.9906** > DDPM 0.9577 > WGAN 0.7234 |
-| 12 | [project-12-anomaly-flow](project-12-anomaly-flow/) | Flow log-prob as BSM anomaly score | negative result: AUC 0.486 (honest baseline) |
-| 13 | [project-13-latent-cfm](project-13-latent-cfm/) | VAE latent space + CFM in latent space | VAE recon MSE 1.4e-4, gen. MSE 1.4e-6 |
-| 14 | [project-14-cfg-calo](project-14-cfg-calo/) | Classifier-free guidance for energy control | shower radius grows 6.05 → 6.23 with guidance w 0→7 |
-| 15 | [project-15-transformer-cfm](project-15-transformer-cfm/) | DiT-style transformer velocity field with AdaLN | final CFM loss **0.0129**, 156k params |
-| 16 | [project-16-consistency-calo](project-16-consistency-calo/) | Consistency model, 1-step sampling | 1-step MSE 0.011 vs 50-step 0.009 |
-
-Folder names map 1:1 to the table order (project-1 … project-16).
-
-## Quickstart
-
-```powershell
-pip install -r requirements.txt
-
-# one project (projects 1-10 style):
-cd project-2-conditional-cfm
-python src/main.py           # or: python run.py
-
-# one project (projects 11-16 style):
-cd project-11-benchmark-3-gens
-python src/train.py
-
-# everything, sequentially, with a timing summary table:
-python run_all.py
-```
-
-`run_all.py` options:
-
-```powershell
-python run_all.py --list          # show entry points only
-python run_all.py --smoke         # fast run (GENAI_ITERS=100 for projects 11-16)
-python run_all.py --only 2,11     # run only specific projects
-python run_all.py --stop          # abort at the first failure
-python run_all.py --timeout 600   # per-project timeout in seconds
-```
-
-## Repository layout
-
-```
-Gen-Ai--Aug26/
-├── common/calo/               # shared toolkit: data sim, nets (ResMLP/UNet/DiT/DeepSets/VAE),
-│   │                          # CFM trainer/sampler, metrics (C2ST, W1, profiles), viz
-├── project-1-calo-demo/       … project-10-quantized-flow/   (src/main.py + run.py style)
-│   ├── run.py                  <- thin wrapper: python run.py
-│   ├── src/main.py             <- actual pipeline
-│   ├── configs/default.yaml
-│   └── outputs/                <- committed result figures + metrics.json
-├── project-11-benchmark-3-gens/ … project-16-consistency-calo/ (src/train.py style)
-│   ├── src/train.py            <- single-file self-contained pipeline
-│   └── outputs/
-├── run_all.py                  # runs every project and times it
-├── requirements.txt
-└── README.md
-```
-
-## Notes
-
-- Python 3.12 + CPU-only PyTorch verified end-to-end: all 16 projects, ~10 min
-  total on a plain laptop CPU. No GPU required.
-- Every push runs a CI smoke pass of all 16 projects on GitHub Actions
-  (see the badge above); `run_results.json` from each run is uploaded as an artifact.
-- Datasets and `.pt` checkpoints are **not committed**: all data is synthetic
-  (regenerated deterministically by `common/calo/data.py` / `src/calo_sim.py`),
-  and every model retrains in seconds to minutes on CPU.
-- Each project's `outputs/metrics.json` records the exact evaluation numbers
-  cited in its README.
+Install: `pip install -r requirements.txt`

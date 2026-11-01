@@ -113,8 +113,8 @@ def simulate(
 ) -> dict:
     """Generate ``n_events`` toy showers.
 
-    Returns ``images`` (N,grid,grid) summing to 1, ``energy`` (N,), and — when
-    ``with_points`` — ``points`` (N,pmax,4) = (x_norm, y_norm, layer_norm, e)
+    Returns ``images`` (N,grid,grid) summing to 1, ``energy`` (N,), and - when
+    ``with_points`` - ``points`` (N,pmax,4) = (x_norm, y_norm, layer_norm, e)
     plus ``mask`` (N,pmax).
     """
     rng = np.random.default_rng(seed)

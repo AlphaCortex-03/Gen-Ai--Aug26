@@ -1,4 +1,4 @@
-"""calo — shared toy-calorimeter + flow-matching toolkit for the Aug projects."""
+"""calo - shared toy-calorimeter + flow-matching toolkit for the Aug projects."""
 from .cfm import CFMTrainer, ema_from, euler_sample, make_pairs, update_ema
 from .data import (
     Scaler,

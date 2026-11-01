@@ -1,6 +1,6 @@
-# Core (all projects)
+﻿# Core (all projects)
 numpy>=1.26          # 09/10 verified on 2.5.4 -> use >=2 if you rebuild the env
 matplotlib>=3.8      # headless Agg rendering only, no GUI needed
 torch>=2.2           # CPU wheel is enough: pip install torch --index-url https://download.pytorch.org/whl/cpu
-scipy>=1.18          # project-6-c2st-test gaussian smoothing; needs numpy <2.5 wrapper -> scipy 1.18.1 matches numpy 2.5.x (verified)
+scipy>=1.18          # p10-c2st-test gaussian smoothing; needs numpy <2.5 wrapper -> scipy 1.18.1 matches numpy 2.5.x (verified)
 PyYAML>=6.0          # common/calo/cli.py reads configs/default.yaml
