@@ -11,11 +11,11 @@ params); the student is trained on (x_t, t) → teacher velocity pairs.
 
 | model   | NFE | C2ST AUC | rel. err | ms/event |
 |---------|----:|---------:|---------:|---------:|
-| teacher | 50  | 0.9962   | 0.126    | 0.485    |
-| student | 1   | **0.9985** | 0.164  | **0.0099** |
+| teacher | 50  | 0.9939   | 0.117    | 1.089    |
+| student | 1   | **0.9975** | 0.153  | **0.0243** |
 
-**49× latency speedup** (0.485 → 0.0099 ms/event) while C2ST AUC *improves*
-slightly; observable relative error rises 0.126 → 0.164.
+**45× latency speedup** (1.089 → 0.0243 ms/event) while C2ST AUC *improves*
+slightly; observable relative error rises 0.117 → 0.153.
 
 **How to run:**
 

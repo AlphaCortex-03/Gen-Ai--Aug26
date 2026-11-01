@@ -17,11 +17,11 @@ python run_all.py        # runs all 16 projects sequentially, ~10 min total on C
 | 1 | [project-1-calo-demo](project-1-calo-demo/) | NumPy-only ShowerMC simulation: profiles, observables, event displays | shower depth 3.46 layers, width 2.35 (8192 events) |
 | 2 | [project-2-conditional-cfm](project-2-conditional-cfm/) | Conditional flow matching on beam energy with C2ST evaluation | C2ST AUC **0.998**, mean rel. err 13% |
 | 3 | [project-3-energy-interpolation](project-3-energy-interpolation/) | Train on {10, 50, 100} GeV, sample unseen {30, 70} GeV | unseen-energy AUC **0.994** |
-| 4 | [project-4-flow-distillation](project-4-flow-distillation/) | 50-step teacher → 1-step student flow matching | **49× faster** sampling, AUC 0.9985 kept |
+| 4 | [project-4-flow-distillation](project-4-flow-distillation/) | 50-step teacher → 1-step student flow matching | **45× faster** sampling, AUC 0.9975 kept |
 | 5 | [project-5-pointcloud-cfm](project-5-pointcloud-cfm/) | Shower as a point cloud (x, y, z, E) with a DeepSets velocity net | AUC 0.980 with only **41k params** |
 | 6 | [project-6-c2st-test](project-6-c2st-test/) | Classifier two-sample test: physics features vs raw pixels | physics AUC 0.9568 vs pixels 0.5926 on mean-image fakes |
 | 7 | [project-7-ensemble-flow](project-7-ensemble-flow/) | 3-member flow ensemble → epistemic uncertainty map | member spread AUC ±0.0002, pixel corr 0.9993 |
-| 8 | [project-8-attn-unet-flow](project-8-attn-unet-flow/) | ResMLP vs attention-UNet velocity field | UNet rel. err **0.024 vs 0.227** MLP (9× better) |
+| 8 | [project-8-attn-unet-flow](project-8-attn-unet-flow/) | ResMLP vs attention-UNet velocity field | UNet rel. err **0.017 vs 0.216** MLP (12× better) |
 | 9 | [project-9-layer-autoregressive](project-9-layer-autoregressive/) | Stage-wise layer-by-layer autoregressive generation | AR rel. err 0.037 vs joint 0.238 |
 | 10 | [project-10-quantized-flow](project-10-quantized-flow/) | INT8 quantization + pruning, size/quality Pareto | **3.8× smaller**, AUC drop 0.0001 |
 | 11 | [project-11-benchmark-3-gens](project-11-benchmark-3-gens/) | WGAN-GP vs DDPM vs CFM on identical data | CFM AUC **0.9906** > DDPM 0.9577 > WGAN 0.7234 |
