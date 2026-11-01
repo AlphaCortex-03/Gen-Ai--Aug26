@@ -37,11 +37,11 @@ Folder names map 1:1 to the table order (project-1 … project-16).
 ```powershell
 pip install -r requirements.txt
 
-# one project (05-14 style):
+# one project (projects 1-10 style):
 cd project-2-conditional-cfm
 python src/main.py           # or: python run.py
 
-# one project (15-20 style):
+# one project (projects 11-16 style):
 cd project-11-benchmark-3-gens
 python src/train.py
 
