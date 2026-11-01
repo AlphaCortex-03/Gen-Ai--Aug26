@@ -1,4 +1,4 @@
-"""12 — Velocity architecture bake-off: ResMLP vs attention U-Net.
+"""12 â€” Velocity architecture bake-off: ResMLP vs attention U-Net.
 
 Both nets are trained as flow-matching velocity fields on the same data with
 the same step budget.  The U-Net gets conv inductive bias plus a self-attention

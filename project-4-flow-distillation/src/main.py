@@ -1,4 +1,4 @@
-"""08 — Flow distillation: 50-step teacher -> 1-step student (reflow).
+"""08 â€” Flow distillation: 50-step teacher -> 1-step student (reflow).
 
 The teacher is a standard conditional flow-matching model.  The student is
 trained on *teacher ODE pairs* ``(x0, x1 = Teacher(x0))`` with the same linear
