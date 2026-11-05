@@ -1,4 +1,4 @@
-﻿"""07 - Energy interpolation: train on 10/50/100 GeV, test on 30/70 GeV.
+"""07 - Energy interpolation: train on 10/50/100 GeV, test on 30/70 GeV.
 
 Question: does a continuous energy conditioning learn the *shape* of the
 energy dependence, or does it just memorise the training energies?  We compare

@@ -1,4 +1,4 @@
-﻿"""14 - Compressing the velocity net: int8 + pruning, size vs quality.
+"""14 - Compressing the velocity net: int8 + pruning, size vs quality.
 
 Post-training compression of the flow-matching velocity field:
 

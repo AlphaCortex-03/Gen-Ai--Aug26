@@ -1,3 +1,5 @@
 numpy>=1.26
 matplotlib>=3.8
 torch>=2.0
+scipy>=1.18         # src/main.py: gaussian_filter
+PyYAML>=6.0         # common/calo/cli.py reads configs/default.yaml

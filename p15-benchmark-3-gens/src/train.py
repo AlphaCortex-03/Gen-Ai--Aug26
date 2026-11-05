@@ -1,4 +1,4 @@
-﻿"""
+"""
 p15-benchmark-3-gens -- WGAN-GP vs DDPM vs CFM on identical synthetic data.
 
 Trains all three generators on exactly the same training set, then compares:

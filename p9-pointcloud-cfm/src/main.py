@@ -1,4 +1,4 @@
-﻿"""09 - Point-cloud flow matching with DeepSets.
+"""09 - Point-cloud flow matching with DeepSets.
 
 Same physics, different representation: each shower is a variable-length set of
 hits ``(x, y, layer, E)`` instead of a 16x16 image.  A permutation-equivariant

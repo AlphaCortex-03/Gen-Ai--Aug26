@@ -1,4 +1,4 @@
-﻿"""05 - 2D calorimeter shower visualisation with numpy only.
+"""05 - 2D calorimeter shower visualisation with numpy only.
 
 No torch, no training: this project just generates toy showers and turns them
 into the diagnostic figures every later project is judged against.

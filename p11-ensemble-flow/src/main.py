@@ -1,4 +1,4 @@
-﻿"""11 - Deep ensemble of flows: where is the model uncertain?
+"""11 - Deep ensemble of flows: where is the model uncertain?
 
 Three independently initialised flows are trained on the same data.  Their
 disagreement at fixed energy is an *epistemic* uncertainty estimate; the mean

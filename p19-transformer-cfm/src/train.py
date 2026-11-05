@@ -1,4 +1,4 @@
-﻿"""
+"""
 p19-transformer-cfm -- DiT velocity with AdaLN-Zero conditioning.
 
 Showers are tokenized into 4x4 = 16 patches of 4x4x1 = 16 dims. A stack of

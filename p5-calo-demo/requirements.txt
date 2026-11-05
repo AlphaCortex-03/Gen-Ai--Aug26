@@ -1,2 +1,4 @@
 numpy>=1.26
 matplotlib>=3.8
+torch>=2.0          # calo/__init__ imports cfm/nets -> torch, even though p5 itself is numpy-only
+PyYAML>=6.0         # common/calo/cli.py reads configs/default.yaml

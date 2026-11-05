@@ -1,4 +1,4 @@
-﻿"""
+"""
 p20-consistency-calo -- Consistency-style model, 1-step sampling.
 
 Parameterization: F(x_t, t) = x_t + (1-t) * v_theta(x_t, t, E), which

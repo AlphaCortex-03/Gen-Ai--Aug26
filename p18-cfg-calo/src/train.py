@@ -1,4 +1,4 @@
-﻿"""
+"""
 p18-cfg-calo -- Classifier-Free Guidance for energy control.
 
 Training uses cond-dropout: 10% of samples get the "null" condition (c=0).

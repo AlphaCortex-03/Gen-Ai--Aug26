@@ -1,4 +1,4 @@
-﻿"""10 - Classifier Two-Sample Test (C2ST) as a rigorous quality metric.
+"""10 - Classifier Two-Sample Test (C2ST) as a rigorous quality metric.
 
 We test four "generators" against held-out data:
 

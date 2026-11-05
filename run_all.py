@@ -1,4 +1,4 @@
-﻿"""run_all.py -- run every project in this repo sequentially, timing each one.
+"""run_all.py -- run every project in this repo sequentially, timing each one.
 
 Each project is discovered automatically and its entry point resolved as:
     src/main.py    (p5-p14, pipeline style)
@@ -6,7 +6,7 @@ Each project is discovered automatically and its entry point resolved as:
 
 Usage (PowerShell):
     python run_all.py                 # run everything, full training
-    python run_all.py --smoke         # fast smoke run (GENAI_ITERS=100 for 15-20)
+    python run_all.py --smoke         # fast smoke run (all projects)
     python run_all.py --only 6,15     # run only these project numbers
     python run_all.py --stop          # abort at the first failure
     python run_all.py --list          # show what would run, then exit
@@ -56,9 +56,11 @@ def entry_point(pdir: Path) -> Path | None:
 # ---------------------------------------------------------------- runner
 def run_project(pdir: Path, entry: Path, smoke: bool, timeout: int) -> dict:
     env = os.environ.copy()
-    if smoke:
-        env["GENAI_ITERS"] = "100"          # only honoured by 15-20 train.py
     cmd = [sys.executable, str(entry)]
+    if smoke and entry.name == "main.py":
+        cmd.append("--smoke")               # p5-p14: calo.cli honours --smoke (tiny steps)
+    elif smoke:
+        env["GENAI_ITERS"] = "100"          # p15-p20 train.py: env-var smoke mode
     t0 = time.perf_counter()
     try:
         proc = subprocess.run(cmd, cwd=str(pdir), env=env, timeout=timeout)

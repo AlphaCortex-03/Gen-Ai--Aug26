@@ -26,10 +26,15 @@ jobs:
           pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt
 
+      - name: Syntax + encoding checks
+        run: |
+          python -m compileall -q .       # fails on syntax errors anywhere
+          python _check_ascii.py          # exits non-zero on non-ASCII/BOM files
+
       - name: List discovered projects
         run: python run_all.py --list
 
-      - name: Smoke-run all 16 projects (GENAI_ITERS=100 for projects 11-16)
+      - name: Smoke-run all 16 projects (--smoke for p5-p14, GENAI_ITERS=100 for p15-p20)
         run: python run_all.py --smoke --timeout 600
 
       - name: Upload run report

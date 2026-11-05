@@ -1,4 +1,4 @@
-﻿"""13 - Layer-wise autoregressive generation.
+"""13 - Layer-wise autoregressive generation.
 
 The 16 layers are grouped into 4 blocks of 4 layers.  A separate flow models
 each block conditioned on the energy and on everything generated before it, so

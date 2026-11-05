@@ -1,4 +1,4 @@
-﻿"""06 - Conditional Flow Matching on 2D showers, conditioned on energy only.
+"""06 - Conditional Flow Matching on 2D showers, conditioned on energy only.
 
 Baseline for every conditional project that follows: a residual MLP learns the
 velocity field ``v(x, t | E)`` on the sqrt-scaled 16x16 image and is integrated

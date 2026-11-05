@@ -1,4 +1,4 @@
-﻿"""
+"""
 p16-anomaly-flow -- log-probability as an anomaly score for BSM search.
 
 A continuous normalizing flow (CFM velocity field) is trained ONLY on

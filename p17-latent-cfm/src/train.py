@@ -1,4 +1,4 @@
-﻿"""
+"""
 p17-latent-cfm -- VAE + Flow in latent space.
 
 Stage 1: train a small MLP-VAE that encodes 16x16 showers into 16-d latents.
